@@ -4,8 +4,8 @@ var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  "mongodb://admin:admin@cluster0-shard-00-00-9vb82.mongodb.net:27017,cluster0-shard-00-01-9vb82.mongodb.net:27017,cluster0-shard-00-02-9vb82.mongodb.net:27017/canvas?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin",
-  { useMongoClient: true }
+  "mongodb+srv://admin:admin@mongodbcluster-va4s4.mongodb.net/grubhub?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
 );
 var mdb = mongoose.connection;
 
