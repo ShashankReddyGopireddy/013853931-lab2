@@ -84,11 +84,13 @@ class RestaurantHome extends Component {
     });
   };
 
-  togglePopup = (itemPrice, itemId, restId, itemQuantity) => {
+  togglePopup = (itemPrice, itemId, restId, itemQuantity, itemName) => {
     console.log("in togglePopup with Id: ");
     console.log(itemQuantity);
     let itemTotal = itemPrice * itemQuantity;
     const data = {
+      //  itemId: item_id,
+      itemName: itemName,
       itemId: itemId,
       restId: restId,
       itemQuantity: itemQuantity,

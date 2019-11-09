@@ -25,7 +25,7 @@ app.use(cookieParser());
 var LocalStorage = require("node-localstorage").LocalStorage;
 localStorage = new LocalStorage("./local");
 
-app.use(cors({ origin: "http://3.13.209.241:3000", credentials: true }));
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
 // setup session variable
 app.use(
@@ -40,7 +40,7 @@ app.use(
 
 //Allow access control headers
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://3.13.209.241:3000");
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader(
     "Access-Control-Allow-Methods",
